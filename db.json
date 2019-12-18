@@ -1,0 +1,56 @@
+{
+  "posts": {
+    "WQER32132E92838": {
+      "createdBy": "adq323e23e3e23e",
+      "createdOn": "2019-12-10T18:11:12+00:00",
+      "lastUpdatedBy": "wqe21e2e123e12",
+      "lastUpdatedOn": "2019-12-10T18:11:12+00:00",
+      "title": "What is capital of india?",
+      "description": "I was thinking of learning the capitals on major world countries, but couldn't find the capital of india. Please help me",
+      "answers": {
+        "a56d7sfda7": {
+          "description": "Capital of india is delhi",
+          "createdBy": "d3y1289y9231ud23",
+          "createdOn": "2019-12-10T18:11:12+00:00",
+          "lastUpdatedBy": "wqe21e2e123e12",
+          "lastUpdatedOn": "2019-12-10T18:11:12+00:00",
+          "acceptedByUser": true
+        },
+        "83d893d9y8u": {
+          "description": "Capital of india is Mumbai",
+          "createdBy": "172984127089",
+          "createdOn": "2019-12-10T18:11:12+00:00",
+          "lastUpdatedBy": "wqe21e2e123e12",
+          "lastUpdatedOn": "2019-12-10T18:11:12+00:00",
+          "acceptedByUser": false
+        }
+      }
+    }
+  },
+  "users": {
+    "adq323e23e3e23e": {
+      "name": "Manjot",
+      "avatarUrl": "www.manjot.in/mypic",
+      "createdBy": "adq323e23e3e23e",
+      "createdOn": "2019-12-10T18:11:12+00:00",
+      "lastUpdatedBy": "wqe21e2e123e12",
+      "lastUpdatedOn": "2019-12-10T18:11:12+00:00"
+    },
+    "d3y1289y9231ud23": {
+      "name": "Gurjot",
+      "avatarUrl": "www.gurjot.in/mypic",
+      "createdBy": "172984127089",
+      "createdOn": "2019-12-10T18:11:12+00:00",
+      "lastUpdatedBy": "wqe21e2e123e12",
+      "lastUpdatedOn": "2019-12-10T18:11:12+00:00"
+    },
+    "172984127089": {
+      "name": "Maninder",
+      "avatarUrl": "www.maninder.in/mypic",
+      "createdBy": "d3y1289y9231ud23",
+      "createdOn": "2019-12-10T18:11:12+00:00",
+      "lastUpdatedBy": "wqe21e2e123e12",
+      "lastUpdatedOn": "2019-12-10T18:11:12+00:00"
+    }
+  }
+}
