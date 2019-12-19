@@ -3,6 +3,7 @@ import {Text, View} from 'react-native';
 
 export default class Fetch extends Component {
   componentWillMount() {
+    super();
     fetch('https://www.reddit.com/.json', {method: 'get'}).then(res =>
       console.log(res),
     );
