@@ -16,6 +16,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {Reddit} from './fetch';
 
 const {width, height} = Dimensions.get('window');
 export default class Main extends Component {
@@ -37,6 +38,7 @@ export default class Main extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Reddit />
         <TextInput
           value={this.state.newTodo}
           onChange={this.handleChange.bind(this)}

@@ -11,7 +11,8 @@ import {Text, View, TextInput} from 'react-native';
 import Main from './src/app/todo';
 import Fetch from './src/app/fetch';
 import {Provider} from 'react-redux';
-import {store} webkitConvertPointFromNodeToPage './src/app/store';
+import {store} from './src/app/store';
+
 import {
   TouchableHighlight,
   SafeAreaView,
