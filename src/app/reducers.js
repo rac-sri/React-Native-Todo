@@ -3,6 +3,9 @@ const FETCH_POST_COMPLETE = 'sajdsa';
 export const ADD_POST = 'ADD_POST';
 import {combineReducers} from 'redux';
 
+const user = (state = {}, action) => {
+  return state;
+};
 export const reddit = (state = [{name: 'demp'}, {name: 'hello'}], action) => {
   switch (action.type) {
     case ADD_POST:
@@ -16,4 +19,4 @@ export const reddit = (state = [{name: 'demp'}, {name: 'hello'}], action) => {
   }
 };
 
-export const reducer = combineReducers({reddit});
+export const reducer = combineReducers({reddit, user});

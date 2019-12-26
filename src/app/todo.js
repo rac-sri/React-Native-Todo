@@ -17,13 +17,29 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {Reddit} from './fetch';
+import {TodoForm} from './todoForm';
 
 const {width, height} = Dimensions.get('window');
+
+import {connect} from 'react-redux';
+
+const mapActionsToProps = dispatch => ({
+  createTodo(todo) {
+    dispatch({type: 'CREATE_TODO', payload: 'new_todo'});
+  },
+});
+
+const mapStateToProps = store => ({
+  todos: store.todos,
+});
+
 export default class Main extends Component {
+  static defaultProps = {
+    todos: [],
+  };
   constructor() {
     super();
     this.state = {
-      todos: [1, 2, 3],
       newTodo: '',
     };
   }
@@ -33,7 +49,8 @@ export default class Main extends Component {
     this.setState({newTodo: value});
   }
   handlePress(e) {
-    console.log('Fdsfjkds');
+    this.props.createTodo(this.state.newTodo);
+    this.setState({newTodo: ''});
   }
   render() {
     return (
@@ -43,7 +60,12 @@ export default class Main extends Component {
           value={this.state.newTodo}
           onChange={this.handleChange.bind(this)}
         />
-        {this.state.todos.map((todo, i) => (
+        <TodoForm
+          handleChange={this.handleChange.bind(this)}
+          handlePress={this.handlePress.bind()}
+          value={this.state.newTodo}
+        />
+        {this.props.todos.map((todo, i) => (
           <Text key={i}>{todo} </Text>
         ))}
         <TouchableHighlight onPress={this.handlePress.bind(this)}>
@@ -54,6 +76,7 @@ export default class Main extends Component {
   }
 }
 
+export const MainFinal = connect(mapStateToProps, mapActionsToProps)(Main);
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter,
