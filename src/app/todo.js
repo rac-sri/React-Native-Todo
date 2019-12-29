@@ -76,6 +76,7 @@ export default class Main extends Component {
   }
 }
 
+// eslint-disable-next-line prettier/prettier
 export const MainFinal = connect(mapStateToProps, mapActionsToProps)(Main);
 const styles = StyleSheet.create({
   scrollView: {

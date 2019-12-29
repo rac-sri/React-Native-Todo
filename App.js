@@ -28,14 +28,15 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-
+import TabView from 'react-native-scrollable-';
 export default class App extends Component {
   render() {
     return (
       <>
         <Provider store={store}>
           <Main />
-          <Fetch />
+          <TabView tablabel="Todos" />
+          <Fetch tablabel="other" />
         </Provider>
       </>
     );
