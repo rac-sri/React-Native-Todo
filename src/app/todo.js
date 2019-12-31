@@ -8,7 +8,7 @@ import {
   StatusBar,
   Dimensions,
 } from 'react-native';
-
+import {createTodo, getTodos} from './actionCreator';
 import {
   Header,
   LearnMoreLinks,
@@ -25,7 +25,10 @@ import {connect} from 'react-redux';
 
 const mapActionsToProps = dispatch => ({
   createTodo(todo) {
-    dispatch({type: 'CREATE_TODO', payload: 'new_todo'});
+    dispatch(createTodo({name: todo}));
+  },
+  getTodos() {
+    dispatch(getTodos());
   },
 });
 
@@ -44,6 +47,9 @@ export default class Main extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getTodos();
+  }
   handleChange(e) {
     const {value} = e.target;
     this.setState({newTodo: value});
@@ -66,7 +72,7 @@ export default class Main extends Component {
           value={this.state.newTodo}
         />
         {this.props.todos.map((todo, i) => (
-          <Text key={i}>{todo} </Text>
+          <Text key={i}>{todo.name} </Text>
         ))}
         <TouchableHighlight onPress={this.handlePress.bind(this)}>
           <Text>tap me</Text>

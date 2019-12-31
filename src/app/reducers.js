@@ -14,6 +14,10 @@ export const reddit = (state = [{name: 'demp'}, {name: 'hello'}], action) => {
       return state;
     case FETCH_POST_COMPLETE:
       return action.payload;
+    case 'CREATE_TODO':
+      return [action.payload, ...state];
+    case 'GET_TODOS':
+      return action.payload;
     default:
       return state;
   }
